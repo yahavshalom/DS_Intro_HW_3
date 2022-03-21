@@ -41,7 +41,7 @@ def longest_words(file):
             final_list.append(new)
     sort_word= sorted(final_list, key = len, reverse= True) ## sorted by the longest first
     sort_list = sort_word[:5]
-    return (sort_list) ## return the 5th longest words
+    return (sort_list) ## return the 5 longest words
 
 
 
