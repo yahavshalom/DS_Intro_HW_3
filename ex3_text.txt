@@ -14,7 +14,7 @@ kilometers (about 186,000 miles) per second. At such a speed, you
 could circle the Earth seven times between heartbeats.
  
 If light can't escape a black hole, it follows that nothing else
-can. Consequently, there is no direct way to detect a black hole.
+can.Consequently, there is no direct way to detect a black hole.
  
 In fact, the principal evidence of the existence of black holes
 comes not from observation but from solutions to complex equations
