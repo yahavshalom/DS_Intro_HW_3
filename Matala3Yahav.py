@@ -19,10 +19,11 @@ def read_line(n, file):
     else: ## if none above happens
         return str(new_file[n-1])
 
-
+#QA 2
 def longest_words(file):
     if file != 'ex3_text.txt': ## if the file name incorrect
-        return "file not found"
+        print("file not found")
+        return list()
     file = open('C:\\Users\\yahav\\.spyder-py3\\ex3_text.txt')  ## read the file
     new_file = list()
     final_list = list()
@@ -39,7 +40,5 @@ def longest_words(file):
     sort_word= sorted(final_list, key = len, reverse= True) ## sorted by the longest first
     sort_list = sort_word[:5]
     return (sort_list) ## return the 5th longest words
-
-    
 
 
