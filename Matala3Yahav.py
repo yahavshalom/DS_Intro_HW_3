@@ -32,13 +32,16 @@ def longest_words(file):
         word = line.split()
         for new_word in word: ## read word-by-word
            new_file.append(new_word)
-    for dot in new_file: ## separate the dot from the word
+    for dot in new_file: ## separate the dot from the words
         if dot.startswith("-") == False:
             words = dot.split(".")
         for new in words:
+            if new.endswith(","):
+                new = new.rstrip(",") ## remove the "," after the word Consequently
             final_list.append(new)
     sort_word= sorted(final_list, key = len, reverse= True) ## sorted by the longest first
     sort_list = sort_word[:5]
     return (sort_list) ## return the 5th longest words
+
 
 
