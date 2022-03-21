@@ -25,18 +25,20 @@ def longest_words(file):
         return "file not found"
     file = open('C:\\Users\\yahav\\.spyder-py3\\ex3_text.txt')  ## read the file
     new_file = list()
-    new_list = list()
+    final_list = list()
+    sort_list = list()
     for line in file: ## Read line-by-line
-        line = line.strip()
-        new_file.append(line.split())      
-    for word in new_file: ## read word by word
-        longest= " "
-        for num in range(len(word)): ## cheack if the word longest then the others
-            if len(longest) < len(word[num]):
-                longest = word[num]
-                new_list.append(longest)
-            sort_word= sorted(new_list, key = len, reverse= True) ## sorted by the longest first
-    return (sort_word[1:6]) ## return the 5th longest words
+        word = line.split()
+        for new_word in word: ## read word-by-word
+           new_file.append(new_word)
+    for dot in new_file: ## separate the dot from the word
+        if dot.startswith("-") == False:
+            words = dot.split(".")
+        for new in words:
+            final_list.append(new)
+    sort_word= sorted(final_list, key = len, reverse= True) ## sorted by the longest first
+    sort_list = sort_word[:5]
+    return (sort_list) ## return the 5th longest words
 
     
 
